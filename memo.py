@@ -31,12 +31,12 @@ class MemoAdmin:#主体程序类
         print(memos)
 
     def load_pkl(self):#获取最新字典数据，封装为方法
-        with open('./db.pkl','rb') as f:
+        with open('db.pkl','rb') as f:
             pklMemos=pickle.loads(f.read()) 
             return pklMemos
 
     def write_pkl(self,memos):#数据写入，封装为方法
-        with open('./db.pkl','wb') as f:
+        with open('db.pkl','wb') as f:
             f.write(pickle.dumps(memos))
     
 
